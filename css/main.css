@@ -1,0 +1,6 @@
+ul {list-style:none;}
+#main {list-style:none; padding-left:0;}
+#main li {float:left; margin:20px;}
+#main img {width:100px;}
+
+.detail img {float:left; margin-right:30px;}

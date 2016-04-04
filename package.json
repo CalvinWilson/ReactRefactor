@@ -1,0 +1,43 @@
+{
+  "name": "tiy-instagram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "css-loader": "^0.23.0",
+    "bootstrap": "^3.3.5",
+    "backbone": "^1.2.3",
+    "bootstrap-webpack": "^0.0.5",
+    "exports-loader": "^0.6.2",
+    "file-loader": "^0.8.4",
+    "faker": "^3.0.1",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "jquery": "^2.1.4",
+    "hogan.js": "^3.0.2",
+    "json-loader": "^0.5.3",
+    "imports-loader": "^0.6.5",
+    "less-loader": "^2.2.1",
+    "loader-utils": "^0.2.11",
+    "less": "^2.5.3",
+    "mustache": "^2.2.0",
+    "style-loader": "^0.13.0",
+    "underscore": "^1.8.3",
+    "url-loader": "^0.5.6",
+    "mustache-loader": "^0.3.0",
+    "webpack": "^1.12.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiy-lv-frontend-2015-10/ReactRefactor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiy-lv-frontend-2015-10/ReactRefactor/issues"
+  },
+  "homepage": "https://github.com/tiy-lv-frontend-2015-10/ReactRefactor#readme"
+}
