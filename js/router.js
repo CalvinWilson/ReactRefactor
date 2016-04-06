@@ -5,6 +5,14 @@ var mainTemplate = require('./templates/main.html');
 var detailTemplate = require('./templates/detail.html');
 var addEditTemplate = require('./templates/addEdit.html');
 
+import React from "react";
+import ReactDOM from "react-dom";
+import MainTemp from "./home.js";
+import DetailTemp from "./detail.js";
+import AddEditTemp from "./addEdit.js";
+
+
+
 var Router = Backbone.Router.extend({
   initialize: function () {
     Backbone.history.start({pushState: true});
@@ -18,8 +26,8 @@ var Router = Backbone.Router.extend({
   index: function () {
     Posts.fetch({
       success: function (posts) {
-        var html = mainTemplate({'data': posts.toJSON()});
-        $("#container").html(html);
+        ReactDOM.render(<MainTemp data={posts.toJSON()} />,
+          document.getElementById("container"))
       }
     });
   }
@@ -29,19 +37,20 @@ var router = new Router();
 
 router.on('route:post', function (objectId) {
   var post = Posts.get(objectId);
-  var html = detailTemplate(post.toJSON());
-  $("#container").html(html);
+  ReactDOM.render(<DetailTemp data={post.toJSON()} />,
+          document.getElementById("container"))
 });
 
 router.on('route:add', function () {
-  var html = addEditTemplate({});
-  $("#container").html(html);
+ ReactDOM.render(<AddEditTemp data={{}}/>,
+   document.getElementById('container')
+   )
 });
 
 router.on('route:edit', function (objectId) {
   var post = Posts.get(objectId);
-  var html = addEditTemplate(post.toJSON());
-  $("#container").html(html);
+  ReactDOM.render(<AddEditTemp data={post.toJSON()} />,
+          document.getElementById("container"))
 });
 
 $('body').on('click', 'a', function (e){
